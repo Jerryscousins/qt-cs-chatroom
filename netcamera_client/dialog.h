@@ -3,6 +3,7 @@
 
 #include <QDialog>
 #include "scocknet.h"
+#include "firstpage.h"
 
 
 QT_BEGIN_NAMESPACE
@@ -24,6 +25,7 @@ private slots:
 
 private:
     Ui::Dialog *ui;
+    FirstPage *firstpage1;
     scocknet * client_socket;
 };
 #endif // DIALOG_H

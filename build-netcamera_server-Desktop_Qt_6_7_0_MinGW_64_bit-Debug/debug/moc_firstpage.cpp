@@ -40,10 +40,10 @@ constexpr auto qt_meta_stringdata_CLASSFirstPageENDCLASS = QtMocHelpers::stringD
     "",
     "dead",
     "on_accept_clicked",
-    "accept",
     "on_reg_clicked",
     "on_back_clicked",
-    "on_reg_2_clicked"
+    "on_reg_2_clicked",
+    "accept"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -103,13 +103,13 @@ Q_CONSTINIT const QMetaObject FirstPage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_accept_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
-        // method 'accept'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_reg_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_back_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_reg_2_clicked'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'accept'
         QtPrivate::TypeAndForceComplete<void, std::false_type>
     >,
     nullptr
@@ -124,10 +124,10 @@ void FirstPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 0: _t->goAccept(); break;
         case 1: _t->dead(); break;
         case 2: _t->on_accept_clicked(); break;
-        case 3: _t->accept(); break;
-        case 4: _t->on_reg_clicked(); break;
-        case 5: _t->on_back_clicked(); break;
-        case 6: _t->on_reg_2_clicked(); break;
+        case 3: _t->on_reg_clicked(); break;
+        case 4: _t->on_back_clicked(); break;
+        case 5: _t->on_reg_2_clicked(); break;
+        case 6: _t->accept(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {

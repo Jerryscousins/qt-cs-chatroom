@@ -6,13 +6,16 @@ Dialog::Dialog(QWidget *parent)
     , ui(new Ui::Dialog)
 {
     ui->setupUi(this);
+    this->show();
+    firstpage1 = new FirstPage();
+    firstpage1->show();
     client_socket = new scocknet();
     connect(ui->pushButton,SIGNAL(clicked()),client_socket,SLOT(msg_write()));
-
 }
 
 Dialog::~Dialog()
 {
+    delete firstpage1;
     delete ui;
 }
 

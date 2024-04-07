@@ -12,14 +12,17 @@ CONFIG += c++17
 SOURCES += \
     main.cpp \
     dialog.cpp \
-    scocknet.cpp
+    scocknet.cpp \
+    firstpage.cpp \
 
 HEADERS += \
     dialog.h \
-    scocknet.h
+    scocknet.h \
+    firstpage.h \
 
 FORMS += \
-    dialog.ui
+    dialog.ui \
+    firstpage.ui \
 
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin

@@ -1,4 +1,4 @@
-/****************************************************************************
+﻿/****************************************************************************
 ** Meta object code from reading C++ file 'scocknet.h'
 **
 ** Created by: The Qt Meta Object Compiler version 68 (Qt 6.7.0)
@@ -94,7 +94,6 @@ void scocknet::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         (void)_t;
         switch (_id) {
         case 0: _t->accept_connect(); break;
-        case 1: _t->listen_read(); break;
         default: ;
         }
     }

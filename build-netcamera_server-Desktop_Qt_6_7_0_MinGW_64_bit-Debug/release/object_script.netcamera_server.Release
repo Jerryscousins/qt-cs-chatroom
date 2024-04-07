@@ -4,7 +4,9 @@ release/main.o
 release/dialog.o
 release/netsql.o
 release/scocknet.o
+release/sonsocket.o
 release/moc_changeuser.o
 release/moc_dialog.o
 release/moc_firstpage.o
 release/moc_scocknet.o
+release/moc_sonsocket.o

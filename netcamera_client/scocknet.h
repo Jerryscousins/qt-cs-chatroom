@@ -5,7 +5,7 @@
 #include <QTcpSocket>
 #include <Qdebug>
 #include <QTextEdit>
-
+#include <qthread.h>
 
 class scocknet:public QObject
 {
@@ -14,6 +14,8 @@ public:
     scocknet();
     QTcpSocket *mysock;
     QTextEdit *print_text;
+private:
+    bool flag = 1;
 private slots:
     void accept_connect();
     void msg_write();

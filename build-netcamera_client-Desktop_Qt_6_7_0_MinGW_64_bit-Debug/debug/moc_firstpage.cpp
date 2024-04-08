@@ -43,6 +43,7 @@ constexpr auto qt_meta_stringdata_CLASSFirstPageENDCLASS = QtMocHelpers::stringD
     "go_Log",
     "user_name",
     "user_pw",
+    "go_Reg",
     "on_accept_clicked",
     "on_reg_clicked",
     "on_back_clicked",
@@ -50,7 +51,8 @@ constexpr auto qt_meta_stringdata_CLASSFirstPageENDCLASS = QtMocHelpers::stringD
     "accept",
     "net_open",
     "log_return",
-    "back"
+    "back",
+    "Reg_return"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -63,30 +65,33 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSFirstPageENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      10,   14, // methods
+      12,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       3,       // signalCount
+       4,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,   74,    2, 0x06,    1 /* Public */,
-       3,    0,   75,    2, 0x06,    2 /* Public */,
-       4,    2,   76,    2, 0x06,    3 /* Public */,
+       1,    0,   86,    2, 0x06,    1 /* Public */,
+       3,    0,   87,    2, 0x06,    2 /* Public */,
+       4,    2,   88,    2, 0x06,    3 /* Public */,
+       7,    2,   93,    2, 0x06,    6 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-       7,    0,   81,    2, 0x08,    6 /* Private */,
-       8,    0,   82,    2, 0x08,    7 /* Private */,
-       9,    0,   83,    2, 0x08,    8 /* Private */,
-      10,    0,   84,    2, 0x08,    9 /* Private */,
-      11,    0,   85,    2, 0x08,   10 /* Private */,
-      12,    0,   86,    2, 0x08,   11 /* Private */,
-      13,    1,   87,    2, 0x08,   12 /* Private */,
+       8,    0,   98,    2, 0x08,    9 /* Private */,
+       9,    0,   99,    2, 0x08,   10 /* Private */,
+      10,    0,  100,    2, 0x08,   11 /* Private */,
+      11,    0,  101,    2, 0x08,   12 /* Private */,
+      12,    0,  102,    2, 0x08,   13 /* Private */,
+      13,    0,  103,    2, 0x08,   14 /* Private */,
+      14,    1,  104,    2, 0x08,   15 /* Private */,
+      16,    1,  107,    2, 0x08,   17 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString, QMetaType::QString,    5,    6,
     QMetaType::Void, QMetaType::QString, QMetaType::QString,    5,    6,
 
  // slots: parameters
@@ -96,7 +101,8 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSFirstPageENDCLASS[] = {
     QMetaType::Void,
     QMetaType::Void,
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,   14,
+    QMetaType::Void, QMetaType::QString,   15,
+    QMetaType::Void, QMetaType::QString,   15,
 
        0        // eod
 };
@@ -118,6 +124,10 @@ Q_CONSTINIT const QMetaObject FirstPage::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'go_Reg'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'on_accept_clicked'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'on_reg_clicked'
@@ -131,6 +141,9 @@ Q_CONSTINIT const QMetaObject FirstPage::staticMetaObject = { {
         // method 'net_open'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'log_return'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'Reg_return'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>
     >,
@@ -146,13 +159,15 @@ void FirstPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
         case 0: _t->goAccept(); break;
         case 1: _t->dead(); break;
         case 2: _t->go_Log((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
-        case 3: _t->on_accept_clicked(); break;
-        case 4: _t->on_reg_clicked(); break;
-        case 5: _t->on_back_clicked(); break;
-        case 6: _t->on_reg_2_clicked(); break;
-        case 7: _t->accept(); break;
-        case 8: _t->net_open(); break;
-        case 9: _t->log_return((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 3: _t->go_Reg((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2]))); break;
+        case 4: _t->on_accept_clicked(); break;
+        case 5: _t->on_reg_clicked(); break;
+        case 6: _t->on_back_clicked(); break;
+        case 7: _t->on_reg_2_clicked(); break;
+        case 8: _t->accept(); break;
+        case 9: _t->net_open(); break;
+        case 10: _t->log_return((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 11: _t->Reg_return((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -178,6 +193,13 @@ void FirstPage::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, v
                 return;
             }
         }
+        {
+            using _t = void (FirstPage::*)(QString , QString );
+            if (_t _q_method = &FirstPage::go_Reg; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 3;
+                return;
+            }
+        }
     }
 }
 
@@ -200,13 +222,13 @@ int FirstPage::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 10)
+        if (_id < 12)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 10;
+        _id -= 12;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 10)
+        if (_id < 12)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 10;
+        _id -= 12;
     }
     return _id;
 }
@@ -228,5 +250,12 @@ void FirstPage::go_Log(QString _t1, QString _t2)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
     QMetaObject::activate(this, &staticMetaObject, 2, _a);
+}
+
+// SIGNAL 3
+void FirstPage::go_Reg(QString _t1, QString _t2)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))) };
+    QMetaObject::activate(this, &staticMetaObject, 3, _a);
 }
 QT_WARNING_POP

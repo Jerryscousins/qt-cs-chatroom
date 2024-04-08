@@ -32,15 +32,6 @@ void FirstPage::on_accept_clicked()
     }
 }
 
-void FirstPage::log_return(QString message){
-    if( message == "1" ){
-        username = ui->username->text();
-        emit goAccept();
-    }else{
-        QMessageBox::about(this,"验证失败","是的孩子，这并不好笑");
-    }
-}
-
 void FirstPage::on_reg_clicked()
 {
     ui->layout->setCurrentIndex(1);
@@ -55,18 +46,11 @@ void FirstPage::on_back_clicked()
 
 void FirstPage::on_reg_2_clicked()
 {
-    // if(ui->useradd->text() != "" && ui->useraddpw1->text() != "" && ui->useraddpw1->text() == ui->useraddpw2->text()){
-    //     if(database->find_name(ui->useradd->text()) == 1){
-    //         database->reg(ui->useradd->text(),ui->useraddpw1->text());
-    //         ui->username->setText(ui->useradd->text());
-    //         ui->userpw->setText("");
-    //         on_back_clicked();
-    //     }else{
-    //         QMessageBox::about(this,"注册失败","该用户名已被使用");
-    //     }
-    // }else{
-    //     QMessageBox::about(this,"注册失败","检查用户名和密码");
-    // }
+    if(ui->useradd->text() != "" && ui->useraddpw1->text() != "" && ui->useraddpw1->text() == ui->useraddpw2->text()){
+        emit go_Reg(ui->useradd->text(),ui->useraddpw1->text());
+    }else{
+        QMessageBox::about(this,"注册失败","检查用户名和密码");
+    }
 }
 
 //调用子类并不会调用父类的？我还需重构
@@ -77,4 +61,26 @@ void FirstPage::closeEvent(QCloseEvent *event){
 void FirstPage::accept(){
     flag = true;
     this->close();
+}
+
+void FirstPage::log_return(QString message){
+    if( message == "1" ){
+        username = ui->username->text();
+        emit goAccept();
+    }else{
+        QMessageBox::about(this,"验证失败","是的孩子，这并不好笑");
+    }
+}
+
+void FirstPage::Reg_return(QString back){
+    if(back == "1"){
+        ui->username->setText(ui->useradd->text());
+        ui->userpw->setText("");
+        on_back_clicked();
+    }else if(back == "2"){
+        QMessageBox::about(this,"注册失败","该用户名已被使用");
+    }else if(back == "0"){
+        QMessageBox::about(this,"注册失败","无效的呈递");
+    }
+
 }

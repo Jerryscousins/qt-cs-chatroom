@@ -94,7 +94,6 @@ void scocknet::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         (void)_t;
         switch (_id) {
         case 0: _t->accept_connect(); break;
-        //case 1: _t->listen_read(); break;
         default: ;
         }
     }

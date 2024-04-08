@@ -29,9 +29,16 @@ void scocknet::msg_read(){
         qDebug() << "登录";
         emit log_send(message);
     }else if(mode == "0001"){
-
+        qDebug() << "注册";
+        emit Reg_send(message);
+    }else if(mode == "0010"){
+        qDebug() << "更改用户名";
+    }else if(mode == "0011"){
+        qDebug() << "更改密码";
+    }else if(mode == "0100"){
+        qDebug() << "注销账号";
     }else if(mode == "1000"){
-
+        qDebug() << "接受信息";
     }else qDebug() << "信息无法理解";
 }
 
@@ -87,6 +94,16 @@ bool scocknet::deluser(QString user_name){
     send = "0100";
     send = send + "\\";
     send = send + user_name;
+    QByteArray sendb = send.toLatin1();
+    mysock->write(sendb.data());
+    return 0;
+}
+
+bool scocknet::meg_send(QString text){
+    QString send;
+    send = "1000";
+    send = send + "\\";
+    send = send + text;
     QByteArray sendb = send.toLatin1();
     mysock->write(sendb.data());
     return 0;

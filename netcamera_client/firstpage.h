@@ -21,16 +21,6 @@ public:
     QString isusername();
     ~FirstPage();
 
-private slots:
-    void on_accept_clicked();
-    void on_reg_clicked();
-    void on_back_clicked();
-    void on_reg_2_clicked();
-    void accept();
-
-    void net_open();
-    void log_return(QString back);
-
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -40,11 +30,24 @@ private:
 
     QString username;
 
+private slots:
+    void on_accept_clicked();
+    void on_reg_clicked();
+    void on_back_clicked();
+    void on_reg_2_clicked();
+    void accept();
+
+    void net_open();
+    void log_return(QString back);
+    void Reg_return(QString back);
+
 signals:
     void goAccept();
     void dead();
 
     void go_Log(QString user_name,QString user_pw);
+    void go_Reg(QString user_name,QString user_pw);
+
 };
 
 #endif // FIRSTPAGE_H

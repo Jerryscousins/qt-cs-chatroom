@@ -28,6 +28,9 @@ private slots:
     void on_reg_2_clicked();
     void accept();
 
+    void net_open();
+    void log_return(QString back);
+
 protected:
     void closeEvent(QCloseEvent *event);
 
@@ -40,6 +43,8 @@ private:
 signals:
     void goAccept();
     void dead();
+
+    void go_Log(QString user_name,QString user_pw);
 };
 
 #endif // FIRSTPAGE_H

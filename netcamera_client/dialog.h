@@ -22,6 +22,8 @@ public:
 
 private slots:
     void on_pushButton_clicked();
+    void all_close();
+    void all_open();
 
 private:
     Ui::Dialog *ui;

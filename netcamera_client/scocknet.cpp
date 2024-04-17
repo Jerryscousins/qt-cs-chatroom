@@ -3,18 +3,21 @@
 scocknet::scocknet() {
 
     mysock = new QTcpSocket();
+}
+
+void scocknet::go_connect(QString IP,int port){
+    qDebug() << "连接!启动！" <<IP << port;
     connect(mysock,SIGNAL(connected()),
             this,SLOT(accept_connect()));
-    mysock->connectToHost("127.0.0.1",11451);
-
-
+    mysock->connectToHost(IP,port);
 }
 
 void scocknet::accept_connect(){
-    qDebug() << "连接!启动！";
+    qDebug() << "连接!大成！";
     user_ip = mysock->peerAddress().toString();
     user_port = mysock->peerPort();
     connect(mysock,SIGNAL(readyRead()),this,SLOT(msg_read()));
+    emit net_accept();
 }
 
 void scocknet::msg_read(){
@@ -104,7 +107,7 @@ bool scocknet::meg_send(QString text){
     send = "1000";
     send = send + "\\";
     send = send + text;
-    QByteArray sendb = send.toLatin1();
+    QByteArray sendb = send.toLocal8Bit();
     mysock->write(sendb.data());
     return 0;
 }

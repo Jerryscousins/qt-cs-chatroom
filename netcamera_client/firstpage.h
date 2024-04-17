@@ -41,10 +41,13 @@ private slots:
     void log_return(QString back);
     void Reg_return(QString back);
 
+    void on_pushButton_clicked();
+
 signals:
     void goAccept();
     void dead();
 
+    void go_connect_tcp(QString ip,int port);
     void go_Log(QString user_name,QString user_pw);
     void go_Reg(QString user_name,QString user_pw);
 

@@ -29,6 +29,7 @@ private slots:
     bool deluser(QString user_name);
     bool meg_send(QString text);
 
+    void go_connect(QString IP,int port);
     void accept_connect();
     void msg_read();
 signals:

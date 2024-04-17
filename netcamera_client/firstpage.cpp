@@ -15,7 +15,7 @@ FirstPage::~FirstPage()
 }
 
 void FirstPage::net_open(){
-
+    ui->layout->setCurrentIndex(0);
 }
 
 QString FirstPage::isusername(){
@@ -30,6 +30,13 @@ void FirstPage::on_accept_clicked()
     }else{
         QMessageBox::about(this,"莫是在消遣洒家","怎是屏幕上空空如也");
     }
+}
+
+void FirstPage::on_pushButton_clicked()
+{
+    qDebug() << "发起连接通告" ;
+
+    emit go_connect_tcp(ui->ip_edit->text(),ui->port_edit->text().toInt());
 }
 
 void FirstPage::on_reg_clicked()
@@ -74,6 +81,7 @@ void FirstPage::log_return(QString message){
 
 void FirstPage::Reg_return(QString back){
     if(back == "1"){
+        QMessageBox::about(this,"新的记忆涌入","带来了生命和希望");
         ui->username->setText(ui->useradd->text());
         ui->userpw->setText("");
         on_back_clicked();
@@ -84,3 +92,6 @@ void FirstPage::Reg_return(QString back){
     }
 
 }
+
+
+

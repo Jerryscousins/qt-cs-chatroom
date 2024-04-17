@@ -40,6 +40,12 @@ public:
     QLineEdit *useraddpw2;
     QPushButton *reg_2;
     QPushButton *back;
+    QWidget *page_3;
+    QLineEdit *ip_edit;
+    QLabel *label_6;
+    QLineEdit *port_edit;
+    QLabel *label_7;
+    QPushButton *pushButton;
 
     void setupUi(QDialog *FirstPage)
     {
@@ -48,6 +54,7 @@ public:
         FirstPage->resize(400, 300);
         layout = new QStackedWidget(FirstPage);
         layout->setObjectName("layout");
+        layout->setEnabled(true);
         layout->setGeometry(QRect(0, 0, 401, 301));
         layout->setLineWidth(1);
         page = new QWidget();
@@ -57,15 +64,18 @@ public:
         label->setGeometry(QRect(90, 60, 69, 19));
         username = new QLineEdit(page);
         username->setObjectName("username");
+        username->setEnabled(true);
         username->setGeometry(QRect(210, 60, 113, 27));
         label_2 = new QLabel(page);
         label_2->setObjectName("label_2");
         label_2->setGeometry(QRect(100, 120, 71, 20));
         userpw = new QLineEdit(page);
         userpw->setObjectName("userpw");
+        userpw->setEnabled(true);
         userpw->setGeometry(QRect(210, 120, 113, 27));
         reg = new QPushButton(page);
         reg->setObjectName("reg");
+        reg->setEnabled(true);
         reg->setGeometry(QRect(200, 220, 151, 28));
         accept = new QPushButton(page);
         accept->setObjectName("accept");
@@ -98,10 +108,28 @@ public:
         back->setObjectName("back");
         back->setGeometry(QRect(190, 230, 171, 28));
         layout->addWidget(page_2);
+        page_3 = new QWidget();
+        page_3->setObjectName("page_3");
+        ip_edit = new QLineEdit(page_3);
+        ip_edit->setObjectName("ip_edit");
+        ip_edit->setGeometry(QRect(220, 70, 113, 27));
+        label_6 = new QLabel(page_3);
+        label_6->setObjectName("label_6");
+        label_6->setGeometry(QRect(80, 70, 91, 19));
+        port_edit = new QLineEdit(page_3);
+        port_edit->setObjectName("port_edit");
+        port_edit->setGeometry(QRect(220, 130, 113, 27));
+        label_7 = new QLabel(page_3);
+        label_7->setObjectName("label_7");
+        label_7->setGeometry(QRect(80, 130, 91, 19));
+        pushButton = new QPushButton(page_3);
+        pushButton->setObjectName("pushButton");
+        pushButton->setGeometry(QRect(140, 220, 92, 28));
+        layout->addWidget(page_3);
 
         retranslateUi(FirstPage);
 
-        layout->setCurrentIndex(0);
+        layout->setCurrentIndex(2);
 
 
         QMetaObject::connectSlotsByName(FirstPage);
@@ -119,6 +147,11 @@ public:
         label_5->setText(QCoreApplication::translate("FirstPage", "\347\241\256\350\256\244\345\257\206\347\240\201", nullptr));
         reg_2->setText(QCoreApplication::translate("FirstPage", "\346\263\250\345\206\214\357\274\201\345\220\257\345\212\250\357\274\201", nullptr));
         back->setText(QCoreApplication::translate("FirstPage", "\346\255\273\345\216\273\347\232\204\350\256\260\345\277\206\345\274\200\345\247\213\346\224\273\345\207\273\346\210\221", nullptr));
+        ip_edit->setText(QCoreApplication::translate("FirstPage", "127.0.0.1", nullptr));
+        label_6->setText(QCoreApplication::translate("FirstPage", "IP\345\234\260\345\235\200", nullptr));
+        port_edit->setText(QCoreApplication::translate("FirstPage", "11451", nullptr));
+        label_7->setText(QCoreApplication::translate("FirstPage", "\347\253\257\345\217\243", nullptr));
+        pushButton->setText(QCoreApplication::translate("FirstPage", "\350\277\236\346\216\245", nullptr));
     } // retranslateUi
 
 };

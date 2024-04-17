@@ -33,6 +33,7 @@ private:
     Ui::Dialog *ui;
     FirstPage *firstpage1;
     scocknet * client_socket;
+    QString user_name;
 
 signals:
     void go_change_user(QString user_name,QString new_name);

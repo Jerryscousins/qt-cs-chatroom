@@ -58,6 +58,9 @@ constexpr auto qt_meta_stringdata_CLASSscocknetENDCLASS = QtMocHelpers::stringDa
     "deluser",
     "meg_send",
     "text",
+    "go_connect",
+    "IP",
+    "port",
     "accept_connect",
     "msg_read"
 );
@@ -72,7 +75,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSscocknetENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      15,   14, // methods
+      16,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
@@ -80,23 +83,24 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSscocknetENDCLASS[] = {
        7,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  104,    2, 0x06,    1 /* Public */,
-       3,    1,  105,    2, 0x06,    2 /* Public */,
-       5,    1,  108,    2, 0x06,    4 /* Public */,
-       7,    1,  111,    2, 0x06,    6 /* Public */,
-       8,    1,  114,    2, 0x06,    8 /* Public */,
-       9,    1,  117,    2, 0x06,   10 /* Public */,
-      10,    1,  120,    2, 0x06,   12 /* Public */,
+       1,    0,  110,    2, 0x06,    1 /* Public */,
+       3,    1,  111,    2, 0x06,    2 /* Public */,
+       5,    1,  114,    2, 0x06,    4 /* Public */,
+       7,    1,  117,    2, 0x06,    6 /* Public */,
+       8,    1,  120,    2, 0x06,    8 /* Public */,
+       9,    1,  123,    2, 0x06,   10 /* Public */,
+      10,    1,  126,    2, 0x06,   12 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-      11,    2,  123,    2, 0x08,   14 /* Private */,
-      14,    2,  128,    2, 0x08,   17 /* Private */,
-      15,    2,  133,    2, 0x08,   20 /* Private */,
-      17,    2,  138,    2, 0x08,   23 /* Private */,
-      19,    1,  143,    2, 0x08,   26 /* Private */,
-      20,    1,  146,    2, 0x08,   28 /* Private */,
-      22,    0,  149,    2, 0x08,   30 /* Private */,
-      23,    0,  150,    2, 0x08,   31 /* Private */,
+      11,    2,  129,    2, 0x08,   14 /* Private */,
+      14,    2,  134,    2, 0x08,   17 /* Private */,
+      15,    2,  139,    2, 0x08,   20 /* Private */,
+      17,    2,  144,    2, 0x08,   23 /* Private */,
+      19,    1,  149,    2, 0x08,   26 /* Private */,
+      20,    1,  152,    2, 0x08,   28 /* Private */,
+      22,    2,  155,    2, 0x08,   30 /* Private */,
+      25,    0,  160,    2, 0x08,   33 /* Private */,
+      26,    0,  161,    2, 0x08,   34 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -114,6 +118,7 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSscocknetENDCLASS[] = {
     QMetaType::Bool, QMetaType::QString, QMetaType::QString,   12,   18,
     QMetaType::Bool, QMetaType::QString,   12,
     QMetaType::Bool, QMetaType::QString,   21,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int,   23,   24,
     QMetaType::Void,
     QMetaType::Void,
 
@@ -171,6 +176,10 @@ Q_CONSTINIT const QMetaObject scocknet::staticMetaObject = { {
         // method 'meg_send'
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'go_connect'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        QtPrivate::TypeAndForceComplete<int, std::false_type>,
         // method 'accept_connect'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'msg_read'
@@ -204,8 +213,9 @@ void scocknet::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
         case 12: { bool _r = _t->meg_send((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 13: _t->accept_connect(); break;
-        case 14: _t->msg_read(); break;
+        case 13: _t->go_connect((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 14: _t->accept_connect(); break;
+        case 15: _t->msg_read(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -281,13 +291,13 @@ int scocknet::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 15)
+        if (_id < 16)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 15;
+        _id -= 16;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 15)
+        if (_id < 16)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 15;
+        _id -= 16;
     }
     return _id;
 }

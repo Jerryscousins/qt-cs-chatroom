@@ -14,6 +14,9 @@
    <string>Dialog</string>
   </property>
   <widget class="QStackedWidget" name="layout">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
    <property name="geometry">
     <rect>
      <x>0</x>
@@ -26,7 +29,7 @@
     <number>1</number>
    </property>
    <property name="currentIndex">
-    <number>0</number>
+    <number>2</number>
    </property>
    <widget class="QWidget" name="page">
     <widget class="QLabel" name="label">
@@ -43,6 +46,9 @@
      </property>
     </widget>
     <widget class="QLineEdit" name="username">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>210</x>
@@ -66,6 +72,9 @@
      </property>
     </widget>
     <widget class="QLineEdit" name="userpw">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>210</x>
@@ -76,6 +85,9 @@
      </property>
     </widget>
     <widget class="QPushButton" name="reg">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
        <x>200</x>
@@ -196,6 +208,73 @@
      </property>
      <property name="text">
       <string>死去的记忆开始攻击我</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="page_3">
+    <widget class="QLineEdit" name="ip_edit">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>70</y>
+       <width>113</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>127.0.0.1</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_6">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>70</y>
+       <width>91</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>IP地址</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="port_edit">
+     <property name="geometry">
+      <rect>
+       <x>220</x>
+       <y>130</y>
+       <width>113</width>
+       <height>27</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>11451</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label_7">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>130</y>
+       <width>91</width>
+       <height>19</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>端口</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="pushButton">
+     <property name="geometry">
+      <rect>
+       <x>140</x>
+       <y>220</y>
+       <width>92</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>连接</string>
      </property>
     </widget>
    </widget>

@@ -740,6 +740,26 @@ release/moc_firstpage.cpp: ../netcamera_client/firstpage.h \
 		E:/Qt/6.7.0/mingw_64/include/QtWidgets/QMessageBox \
 		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qmessagebox.h \
 		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		../netcamera_client/scocknet.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/QTcpServer \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qtcpserver.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qabstractsocket.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qhostaddress.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/QTcpSocket \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qtcpsocket.h \
+		E:/Qt/6.7.0/mingw_64/include/QtCore/Qdebug \
+		E:/Qt/6.7.0/mingw_64/include/QtWidgets/QTextEdit \
+		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qtextedit.h \
+		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
+		E:/Qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		E:/Qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
+		E:/Qt/6.7.0/mingw_64/include/QtGui/qtextcursor.h \
+		E:/Qt/6.7.0/mingw_64/include/QtGui/qtextformat.h \
+		E:/Qt/6.7.0/mingw_64/include/QtGui/qpen.h \
 		release/moc_predefs.h \
 		E:/Qt/6.7.0/mingw_64/bin/moc.exe
 	E:\Qt\6.7.0\mingw_64\bin\moc.exe $(DEFINES) --include D:/insertobject/netcameara/build-netcamera_client-Desktop_Qt_6_7_0_MinGW_64_bit-Debug/release/moc_predefs.h -IE:/Qt/6.7.0/mingw_64/mkspecs/win32-g++ -ID:/insertobject/netcameara/netcamera_client -IE:/Qt/6.7.0/mingw_64/include -IE:/Qt/6.7.0/mingw_64/include/QtWidgets -IE:/Qt/6.7.0/mingw_64/include/QtGui -IE:/Qt/6.7.0/mingw_64/include/QtNetwork -IE:/Qt/6.7.0/mingw_64/include/QtCore -I. -IE:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++ -IE:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/x86_64-w64-mingw32 -IE:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include/c++/backward -IE:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include -IE:/Qt/Tools/mingw1120_64/lib/gcc/x86_64-w64-mingw32/11.2.0/include-fixed -IE:/Qt/Tools/mingw1120_64/x86_64-w64-mingw32/include ..\netcamera_client\firstpage.h -o release\moc_firstpage.cpp
@@ -1203,13 +1223,7 @@ release/dialog.o: ../netcamera_client/dialog.cpp ../netcamera_client/dialog.h \
 		E:/Qt/6.7.0/mingw_64/include/QtWidgets/QMessageBox \
 		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qmessagebox.h \
 		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
-		ui_dialog.h \
-		E:/Qt/6.7.0/mingw_64/include/QtCore/QVariant \
-		E:/Qt/6.7.0/mingw_64/include/QtWidgets/QApplication \
-		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qapplication.h \
-		E:/Qt/6.7.0/mingw_64/include/QtWidgets/QPushButton \
-		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qpushbutton.h \
-		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractbutton.h
+		ui_dialog.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\dialog.o ..\netcamera_client\dialog.cpp
 
 release/scocknet.o: ../netcamera_client/scocknet.cpp ../netcamera_client/scocknet.h \
@@ -1612,6 +1626,26 @@ release/firstpage.o: ../netcamera_client/firstpage.cpp ../netcamera_client/first
 		E:/Qt/6.7.0/mingw_64/include/QtWidgets/QMessageBox \
 		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qmessagebox.h \
 		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qdialogbuttonbox.h \
+		../netcamera_client/scocknet.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/QTcpServer \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qtcpserver.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qtnetworkglobal.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qtnetwork-config.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qtnetworkexports.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qabstractsocket.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qhostaddress.h \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/QTcpSocket \
+		E:/Qt/6.7.0/mingw_64/include/QtNetwork/qtcpsocket.h \
+		E:/Qt/6.7.0/mingw_64/include/QtCore/Qdebug \
+		E:/Qt/6.7.0/mingw_64/include/QtWidgets/QTextEdit \
+		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qtextedit.h \
+		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qabstractscrollarea.h \
+		E:/Qt/6.7.0/mingw_64/include/QtWidgets/qframe.h \
+		E:/Qt/6.7.0/mingw_64/include/QtGui/qtextdocument.h \
+		E:/Qt/6.7.0/mingw_64/include/QtGui/qtextoption.h \
+		E:/Qt/6.7.0/mingw_64/include/QtGui/qtextcursor.h \
+		E:/Qt/6.7.0/mingw_64/include/QtGui/qtextformat.h \
+		E:/Qt/6.7.0/mingw_64/include/QtGui/qpen.h \
 		ui_firstpage.h
 	$(CXX) -c $(CXXFLAGS) $(INCPATH) -o release\firstpage.o ..\netcamera_client\firstpage.cpp
 

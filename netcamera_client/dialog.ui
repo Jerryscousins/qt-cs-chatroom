@@ -22,8 +22,8 @@
    </property>
    <property name="geometry">
     <rect>
-     <x>620</x>
-     <y>480</y>
+     <x>600</x>
+     <y>530</y>
      <width>92</width>
      <height>28</height>
     </rect>
@@ -39,7 +39,7 @@
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>450</y>
+     <y>480</y>
      <width>501</width>
      <height>85</height>
     </rect>
@@ -58,24 +58,11 @@ li.checked::marker { content: &quot;\2612&quot;; }
 &lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
    </property>
   </widget>
-  <widget class="QComboBox" name="comboBox">
-   <property name="enabled">
-    <bool>false</bool>
-   </property>
-   <property name="geometry">
-    <rect>
-     <x>570</x>
-     <y>140</y>
-     <width>171</width>
-     <height>27</height>
-    </rect>
-   </property>
-  </widget>
   <widget class="QLabel" name="label">
    <property name="geometry">
     <rect>
      <x>570</x>
-     <y>70</y>
+     <y>50</y>
      <width>69</width>
      <height>19</height>
     </rect>
@@ -88,7 +75,7 @@ li.checked::marker { content: &quot;\2612&quot;; }
    <property name="geometry">
     <rect>
      <x>650</x>
-     <y>70</y>
+     <y>50</y>
      <width>69</width>
      <height>19</height>
     </rect>
@@ -97,28 +84,66 @@ li.checked::marker { content: &quot;\2612&quot;; }
     <string/>
    </property>
   </widget>
-  <widget class="QScrollArea" name="scrollArea">
+  <widget class="QLabel" name="label_2">
    <property name="geometry">
     <rect>
      <x>40</x>
-     <y>40</y>
-     <width>501</width>
-     <height>351</height>
+     <y>50</y>
+     <width>69</width>
+     <height>19</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>对冲基金</string>
+   </property>
+  </widget>
+  <widget class="QScrollArea" name="scrollArea">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>90</y>
+     <width>511</width>
+     <height>321</height>
     </rect>
    </property>
    <property name="widgetResizable">
     <bool>true</bool>
    </property>
-   <widget class="QWidget" name="scrollAreaWidgetContents">
+   <widget class="QWidget" name="scrollarea">
     <property name="geometry">
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>499</width>
-      <height>349</height>
+      <width>509</width>
+      <height>319</height>
      </rect>
     </property>
    </widget>
+  </widget>
+  <widget class="QToolButton" name="toolButton">
+   <property name="enabled">
+    <bool>false</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>570</x>
+     <y>100</y>
+     <width>171</width>
+     <height>26</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>投共！</string>
+   </property>
+   <property name="popupMode">
+    <enum>QToolButton::InstantPopup</enum>
+   </property>
+   <property name="autoRaise">
+    <bool>false</bool>
+   </property>
+   <property name="arrowType">
+    <enum>Qt::NoArrow</enum>
+   </property>
   </widget>
  </widget>
  <resources/>

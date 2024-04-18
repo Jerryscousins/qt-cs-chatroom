@@ -22,7 +22,7 @@ void scocknet::accept_connect(){
 
 void scocknet::msg_read(){
     QByteArray con = mysock->readAll();
-    QString info = QString::fromLatin1(con, con.size());
+    QString info = QString::fromLocal8Bit(con, con.size());
     qDebug() << user_ip << user_port <<info;
 
     QStringList list = info.split("\\");
@@ -39,9 +39,10 @@ void scocknet::msg_read(){
     }else if(mode == "0011"){
         qDebug() << "更改密码";
     }else if(mode == "0100"){
-        qDebug() << "注销账号";
+        emit deluser_send(message);
     }else if(mode == "1000"){
         qDebug() << "接受信息";
+        emit meg_send_send(message,list.at(2),list.at(3));
     }else qDebug() << "信息无法理解";
 }
 

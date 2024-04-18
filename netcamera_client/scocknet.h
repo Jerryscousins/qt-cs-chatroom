@@ -39,7 +39,7 @@ signals:
     void change_user_send(QString back);
     void change_pw_send(QString back);
     void deluser_send(QString back);
-    void meg_send_send(QString back);
+    void meg_send_send(QString name,QString time,QString msg);
 
 };
 

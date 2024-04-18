@@ -2,6 +2,7 @@
 #define DIALOG_H
 
 #include <QDialog>
+#include <QLabel>
 #include "scocknet.h"
 #include "firstpage.h"
 
@@ -28,17 +29,25 @@ private slots:
     void change_user_return(QString back);
     void change_pw_return(QString back);
     void deluser_return(QString back);
-    void meg_return(QString back);
+    void meg_return(QString name,QString time,QString msg);
+    void tool_accept(QAction * mode);
+
 private:
     Ui::Dialog *ui;
     FirstPage *firstpage1;
     scocknet * client_socket;
     QString user_name;
+    int m_iLabNum = 0;
 
+    void ini_user();
+    QAction * change_pw_c;
+    QAction * change_user_c;
+    QAction * del_user_c;
 signals:
     void go_change_user(QString user_name,QString new_name);
     void go_change_pw(QString user_name,QString new_pw);
     void go_deluser(QString user_name);
     void go_meg_send(QString text);
+
 };
 #endif // DIALOG_H

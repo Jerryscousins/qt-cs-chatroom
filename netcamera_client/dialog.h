@@ -26,8 +26,7 @@ private slots:
     void all_close();
     void all_open();
 
-    void change_user_return(QString back);
-    void change_pw_return(QString back);
+    void updata_name(QString new_name);
     void deluser_return(QString back);
     void meg_return(QString name,QString time,QString msg);
     void tool_accept(QAction * mode);
@@ -44,8 +43,9 @@ private:
     QAction * change_user_c;
     QAction * del_user_c;
 signals:
-    void go_change_user(QString user_name,QString new_name);
-    void go_change_pw(QString user_name,QString new_pw);
+    void go_change_user(QString user_name);
+    void go_change_pw(QString user_name);
+
     void go_deluser(QString user_name);
     void go_meg_send(QString text);
 

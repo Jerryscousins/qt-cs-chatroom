@@ -6,6 +6,7 @@
 #include <Qdebug>
 #include <QTextEdit>
 #include <qthread.h>
+#include "changeuser.h"
 
 class scocknet:public QObject
 {
@@ -17,9 +18,11 @@ public:
 
 private:
     bool flag = 1;
+
     QString user_ip;
     quint16 user_port;
 
+    changeuser *changepage;
 
 private slots:
     bool Login(QString user_name,QString user_pw);
@@ -32,6 +35,11 @@ private slots:
     void go_connect(QString IP,int port);
     void accept_connect();
     void msg_read();
+
+    void change_user_main(QString name);
+    void change_pw_main(QString name);
+    void receive_name(QString new_name);
+
 signals:
     void net_accept();
     void log_send(QString message);
@@ -40,6 +48,7 @@ signals:
     void change_pw_send(QString back);
     void deluser_send(QString back);
     void meg_send_send(QString name,QString time,QString msg);
+    void updata_name(QString new_name);
 
 };
 

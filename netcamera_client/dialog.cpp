@@ -24,6 +24,8 @@ Dialog::Dialog(QWidget *parent)
     connect(client_socket,SIGNAL(meg_send_send(QString,QString,QString)),this,SLOT(meg_return(QString,QString,QString)));
 
     connect(this,SIGNAL(go_meg_send(QString)),client_socket,SLOT(meg_send(QString)));
+    connect(this,SIGNAL(go_change_pw(QString)),client_socket,SLOT(change_pw_main(QString)));
+    connect(this,SIGNAL(go_change_user(QString)),client_socket,SLOT(change_user_main(QString)));
 }
 
 
@@ -62,27 +64,21 @@ void Dialog::ini_user(){
     connect(ui->toolButton,SIGNAL(triggered(QAction*)),this,SLOT(tool_accept(QAction *)));
 
     connect(this,SIGNAL(go_deluser(QString)),client_socket,SLOT(deluser(QString)));
-}
-
-void Dialog::change_user_return(QString back){
-
-}
-
-void Dialog::change_pw_return(QString back){
-
+    connect(client_socket,SIGNAL(updata_name(QString)),this,SLOT(updata_name(QString)));
 }
 
 void Dialog::tool_accept(QAction * mode){
     if(mode == change_pw_c){
-
+        emit go_change_pw(user_name);
     }else if(mode == change_user_c){
-
+        emit go_change_user(user_name);
     }else if(mode == del_user_c){
         emit go_deluser(user_name);
     }else{
         qDebug() << "选的钩子？";
     }
 }
+
 void Dialog::deluser_return(QString back){
     if(back == "1"){
         qDebug() << "注销账号成功";
@@ -115,4 +111,9 @@ void Dialog::meg_return(QString name,QString time,QString msg){
         int height=areas->height();
         areas->setMinimumSize(width,height+22);
     }
+}
+
+void Dialog::updata_name(QString new_name){
+    user_name = new_name;
+    ui->username->setText(user_name);
 }

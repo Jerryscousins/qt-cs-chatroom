@@ -50,12 +50,13 @@ constexpr auto qt_meta_stringdata_CLASSscocknetENDCLASS = QtMocHelpers::stringDa
     "name",
     "time",
     "msg",
+    "updata_name",
+    "new_name",
     "Login",
     "user_name",
     "user_pw",
     "Reg",
     "change_user",
-    "new_name",
     "change_pw",
     "new_pw",
     "deluser",
@@ -65,7 +66,10 @@ constexpr auto qt_meta_stringdata_CLASSscocknetENDCLASS = QtMocHelpers::stringDa
     "IP",
     "port",
     "accept_connect",
-    "msg_read"
+    "msg_read",
+    "change_user_main",
+    "change_pw_main",
+    "receive_name"
 );
 #else  // !QT_MOC_HAS_STRINGDATA
 #error "qtmochelpers.h not found or too old."
@@ -78,32 +82,36 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSscocknetENDCLASS[] = {
       12,       // revision
        0,       // classname
        0,    0, // classinfo
-      16,   14, // methods
+      20,   14, // methods
        0,    0, // properties
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       7,       // signalCount
+       8,       // signalCount
 
  // signals: name, argc, parameters, tag, flags, initial metatype offsets
-       1,    0,  110,    2, 0x06,    1 /* Public */,
-       3,    1,  111,    2, 0x06,    2 /* Public */,
-       5,    1,  114,    2, 0x06,    4 /* Public */,
-       7,    1,  117,    2, 0x06,    6 /* Public */,
-       8,    1,  120,    2, 0x06,    8 /* Public */,
-       9,    1,  123,    2, 0x06,   10 /* Public */,
-      10,    3,  126,    2, 0x06,   12 /* Public */,
+       1,    0,  134,    2, 0x06,    1 /* Public */,
+       3,    1,  135,    2, 0x06,    2 /* Public */,
+       5,    1,  138,    2, 0x06,    4 /* Public */,
+       7,    1,  141,    2, 0x06,    6 /* Public */,
+       8,    1,  144,    2, 0x06,    8 /* Public */,
+       9,    1,  147,    2, 0x06,   10 /* Public */,
+      10,    3,  150,    2, 0x06,   12 /* Public */,
+      14,    1,  157,    2, 0x06,   16 /* Public */,
 
  // slots: name, argc, parameters, tag, flags, initial metatype offsets
-      14,    2,  133,    2, 0x08,   16 /* Private */,
-      17,    2,  138,    2, 0x08,   19 /* Private */,
-      18,    2,  143,    2, 0x08,   22 /* Private */,
-      20,    2,  148,    2, 0x08,   25 /* Private */,
-      22,    1,  153,    2, 0x08,   28 /* Private */,
-      23,    1,  156,    2, 0x08,   30 /* Private */,
-      25,    2,  159,    2, 0x08,   32 /* Private */,
-      28,    0,  164,    2, 0x08,   35 /* Private */,
-      29,    0,  165,    2, 0x08,   36 /* Private */,
+      16,    2,  160,    2, 0x08,   18 /* Private */,
+      19,    2,  165,    2, 0x08,   21 /* Private */,
+      20,    2,  170,    2, 0x08,   24 /* Private */,
+      21,    2,  175,    2, 0x08,   27 /* Private */,
+      23,    1,  180,    2, 0x08,   30 /* Private */,
+      24,    1,  183,    2, 0x08,   32 /* Private */,
+      26,    2,  186,    2, 0x08,   34 /* Private */,
+      29,    0,  191,    2, 0x08,   37 /* Private */,
+      30,    0,  192,    2, 0x08,   38 /* Private */,
+      31,    1,  193,    2, 0x08,   39 /* Private */,
+      32,    1,  196,    2, 0x08,   41 /* Private */,
+      33,    1,  199,    2, 0x08,   43 /* Private */,
 
  // signals: parameters
     QMetaType::Void,
@@ -113,17 +121,21 @@ Q_CONSTINIT static const uint qt_meta_data_CLASSscocknetENDCLASS[] = {
     QMetaType::Void, QMetaType::QString,    6,
     QMetaType::Void, QMetaType::QString,    6,
     QMetaType::Void, QMetaType::QString, QMetaType::QString, QMetaType::QString,   11,   12,   13,
+    QMetaType::Void, QMetaType::QString,   15,
 
  // slots: parameters
-    QMetaType::Bool, QMetaType::QString, QMetaType::QString,   15,   16,
-    QMetaType::Bool, QMetaType::QString, QMetaType::QString,   15,   16,
-    QMetaType::Bool, QMetaType::QString, QMetaType::QString,   15,   19,
-    QMetaType::Bool, QMetaType::QString, QMetaType::QString,   15,   21,
-    QMetaType::Bool, QMetaType::QString,   15,
-    QMetaType::Bool, QMetaType::QString,   24,
-    QMetaType::Void, QMetaType::QString, QMetaType::Int,   26,   27,
+    QMetaType::Bool, QMetaType::QString, QMetaType::QString,   17,   18,
+    QMetaType::Bool, QMetaType::QString, QMetaType::QString,   17,   18,
+    QMetaType::Bool, QMetaType::QString, QMetaType::QString,   17,   15,
+    QMetaType::Bool, QMetaType::QString, QMetaType::QString,   17,   22,
+    QMetaType::Bool, QMetaType::QString,   17,
+    QMetaType::Bool, QMetaType::QString,   25,
+    QMetaType::Void, QMetaType::QString, QMetaType::Int,   27,   28,
     QMetaType::Void,
     QMetaType::Void,
+    QMetaType::Void, QMetaType::QString,   11,
+    QMetaType::Void, QMetaType::QString,   11,
+    QMetaType::Void, QMetaType::QString,   15,
 
        0        // eod
 };
@@ -159,6 +171,9 @@ Q_CONSTINIT const QMetaObject scocknet::staticMetaObject = { {
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'updata_name'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
         // method 'Login'
         QtPrivate::TypeAndForceComplete<bool, std::false_type>,
         QtPrivate::TypeAndForceComplete<QString, std::false_type>,
@@ -188,7 +203,16 @@ Q_CONSTINIT const QMetaObject scocknet::staticMetaObject = { {
         // method 'accept_connect'
         QtPrivate::TypeAndForceComplete<void, std::false_type>,
         // method 'msg_read'
-        QtPrivate::TypeAndForceComplete<void, std::false_type>
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        // method 'change_user_main'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'change_pw_main'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>,
+        // method 'receive_name'
+        QtPrivate::TypeAndForceComplete<void, std::false_type>,
+        QtPrivate::TypeAndForceComplete<QString, std::false_type>
     >,
     nullptr
 } };
@@ -206,21 +230,25 @@ void scocknet::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
         case 4: _t->change_pw_send((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 5: _t->deluser_send((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         case 6: _t->meg_send_send((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[3]))); break;
-        case 7: { bool _r = _t->Login((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+        case 7: _t->updata_name((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 8: { bool _r = _t->Login((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 8: { bool _r = _t->Reg((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+        case 9: { bool _r = _t->Reg((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 9: { bool _r = _t->change_user((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+        case 10: { bool _r = _t->change_user((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 10: { bool _r = _t->change_pw((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
+        case 11: { bool _r = _t->change_pw((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<QString>>(_a[2])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 11: { bool _r = _t->deluser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 12: { bool _r = _t->deluser((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 12: { bool _r = _t->meg_send((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
+        case 13: { bool _r = _t->meg_send((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])));
             if (_a[0]) *reinterpret_cast< bool*>(_a[0]) = std::move(_r); }  break;
-        case 13: _t->go_connect((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
-        case 14: _t->accept_connect(); break;
-        case 15: _t->msg_read(); break;
+        case 14: _t->go_connect((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1])),(*reinterpret_cast< std::add_pointer_t<int>>(_a[2]))); break;
+        case 15: _t->accept_connect(); break;
+        case 16: _t->msg_read(); break;
+        case 17: _t->change_user_main((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 18: _t->change_pw_main((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
+        case 19: _t->receive_name((*reinterpret_cast< std::add_pointer_t<QString>>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
@@ -274,6 +302,13 @@ void scocknet::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, vo
                 return;
             }
         }
+        {
+            using _t = void (scocknet::*)(QString );
+            if (_t _q_method = &scocknet::updata_name; *reinterpret_cast<_t *>(_a[1]) == _q_method) {
+                *result = 7;
+                return;
+            }
+        }
     }
 }
 
@@ -296,13 +331,13 @@ int scocknet::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
     if (_id < 0)
         return _id;
     if (_c == QMetaObject::InvokeMetaMethod) {
-        if (_id < 16)
+        if (_id < 20)
             qt_static_metacall(this, _c, _id, _a);
-        _id -= 16;
+        _id -= 20;
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {
-        if (_id < 16)
+        if (_id < 20)
             *reinterpret_cast<QMetaType *>(_a[0]) = QMetaType();
-        _id -= 16;
+        _id -= 20;
     }
     return _id;
 }
@@ -353,5 +388,12 @@ void scocknet::meg_send_send(QString _t1, QString _t2, QString _t3)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t2))), const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t3))) };
     QMetaObject::activate(this, &staticMetaObject, 6, _a);
+}
+
+// SIGNAL 7
+void scocknet::updata_name(QString _t1)
+{
+    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(std::addressof(_t1))) };
+    QMetaObject::activate(this, &staticMetaObject, 7, _a);
 }
 QT_WARNING_POP
